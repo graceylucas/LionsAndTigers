@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         myTiger.name = "Tigger"
         myTiger.age = 3
         myTiger.breed = "Bengal"
-        myTiger.sound = "Roar"
+        myTiger.sound = "roar"
         myTiger.image = UIImage(named: "BengalTiger")
-                    println("My tiger's name is \(myTiger.name). Its \(myTiger.age)' years old. Its breed is \(myTiger.breed). And it makes the sound \(myTiger.sound).")
+                    println("My pet's name is \(myTiger.name). He is a \(myTiger.age) year old \(myTiger.breed) and he says \(myTiger.sound).")
         
     }
 
