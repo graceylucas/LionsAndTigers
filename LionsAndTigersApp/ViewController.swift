@@ -90,12 +90,28 @@ class ViewController: UIViewController {
         
         let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
         let randomTiger = myTigers[randomIndex]
+//        
+//        imageView.image = randomTiger.image
+//        nameLabel.text = randomTiger.name
+//        ageLabel.text = "\(randomTiger.age)"
+//        breedLabel.text = randomTiger.breed
+//        soundLabel.text = randomTiger.sound
         
-        imageView.image = randomTiger.image
-        nameLabel.text = randomTiger.name
-        ageLabel.text = "\(randomTiger.age)"
-        breedLabel.text = randomTiger.breed
-        soundLabel.text = randomTiger.sound
+        UIView.transitionWithView(self.view, duration: 0.75, options: UIViewAnimationOptions.TransitionCurlDown, animations: {
+            
+            self.imageView.image = randomTiger.image
+            self.nameLabel.text = randomTiger.name
+            self.ageLabel.text = "\(randomTiger.age)"
+            self.breedLabel.text = randomTiger.breed
+            self.soundLabel.text = randomTiger.sound
+    
+            
+            }, completion: { (finished:Bool) -> () in
+                if finished {
+                    println("Transition successfully finished")
+                }
+                
+        })
         
     }
     
