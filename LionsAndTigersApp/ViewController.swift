@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         nameLabel.text = myTiger.name
         ageLabel.text = "\(myTiger.age)"
         breedLabel.text = myTiger.breed
-        
+        soundLabel.text = myTiger.sound
     
         var secondTiger = Tiger()
         secondTiger.name = "Tigress"
@@ -56,12 +56,15 @@ class ViewController: UIViewController {
         secondTiger.sound = "meeew"
         secondTiger.image = UIImage(named: "IndochineseTiger.jpg")
         println("My tiger's name is \(secondTiger.name). She is a \(secondTiger.age) year old \(secondTiger.breed) and says \"\(secondTiger.sound).\"")
-            
+        
+        myTigers.append(secondTiger)
+        
+        
         var thirdTiger = Tiger()
         thirdTiger.name = "Jacob"
         thirdTiger.age = 4
         thirdTiger.breed = "Malayan"
-        secondTiger.sound = "boop"
+        thirdTiger.sound = "boop"
         thirdTiger.image = UIImage(named: "MalayanTiger.jpg")
         
         var fourthTiger = Tiger()
@@ -71,7 +74,7 @@ class ViewController: UIViewController {
         fourthTiger.sound = "sigh"
         fourthTiger.image = UIImage(named: "SiberianTiger.jpg")
         
-        myTigers += [secondTiger, thirdTiger, fourthTiger]
+        myTigers += [thirdTiger, fourthTiger]
     
     }
     
@@ -84,7 +87,18 @@ class ViewController: UIViewController {
     
     @IBAction func nextBarButtonItemPressed(sender: UIBarButtonItem) {
         println(myTigers)
+        
+        let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        let randomTiger = myTigers[randomIndex]
+        
+        imageView.image = randomTiger.image
+        nameLabel.text = randomTiger.name
+        ageLabel.text = "\(randomTiger.age)"
+        breedLabel.text = randomTiger.breed
+        soundLabel.text = randomTiger.sound
+        
     }
+    
     
 }
 
