@@ -19,41 +19,54 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qhp-ct-oSm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHN-at-l1W">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cfi-YE-ngk"/>
-                                    <barButtonItem title="NEXT" id="rhe-fP-ZRl">
-                                        <connections>
-                                            <action selector="nextBarButtonItemPressed:" destination="8dl-M0-GBB" id="EvO-bS-rAt"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dU-Ry-fNa">
-                                <rect key="frame" x="50" y="417" width="500" height="21"/>
+                                <rect key="frame" x="50" y="342" width="500" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCF-aJ-mBa">
-                                <rect key="frame" x="50" y="448" width="500" height="21"/>
+                                <rect key="frame" x="50" y="373" width="500" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXK-UE-PJE">
-                                <rect key="frame" x="50" y="479" width="500" height="21"/>
+                                <rect key="frame" x="50" y="404" width="500" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOUND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-1k-rMr">
-                                <rect key="frame" x="50" y="510" width="500" height="21"/>
+                                <rect key="frame" x="50" y="435" width="500" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHN-at-l1W">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PKm-gt-ErI"/>
+                                    <constraint firstAttribute="height" constant="44" id="sbc-z2-vpi"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fVz-uT-UvD"/>
+                                    <barButtonItem title="NEXT" id="rhe-fP-ZRl">
+                                        <connections>
+                                            <action selector="nextBarButtonItemPressed:" destination="8dl-M0-GBB" id="E9E-S6-9RB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PKm-gt-ErI"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -64,7 +77,7 @@
                             <constraint firstItem="qhp-ct-oSm" firstAttribute="leading" secondItem="MvL-sW-CXh" secondAttribute="leading" id="80X-iT-lgx"/>
                             <constraint firstItem="mBQ-e5-4QJ" firstAttribute="top" secondItem="rHN-at-l1W" secondAttribute="bottom" id="9cP-sA-MVR"/>
                             <constraint firstItem="KXK-UE-PJE" firstAttribute="top" secondItem="iCF-aJ-mBa" secondAttribute="bottom" constant="10" id="Dmq-z9-5B9"/>
-                            <constraint firstItem="rHN-at-l1W" firstAttribute="top" secondItem="dNR-1k-rMr" secondAttribute="bottom" constant="25" id="DqF-WD-Vcb"/>
+                            <constraint firstItem="rHN-at-l1W" firstAttribute="top" secondItem="dNR-1k-rMr" secondAttribute="bottom" constant="100" id="DqF-WD-Vcb"/>
                             <constraint firstItem="iCF-aJ-mBa" firstAttribute="top" secondItem="4dU-Ry-fNa" secondAttribute="bottom" constant="10" id="EuW-LW-asD"/>
                             <constraint firstItem="KXK-UE-PJE" firstAttribute="height" secondItem="dNR-1k-rMr" secondAttribute="height" id="G9F-PI-3rb"/>
                             <constraint firstItem="rHN-at-l1W" firstAttribute="leading" secondItem="MvL-sW-CXh" secondAttribute="leading" id="JDz-zv-kPh"/>
